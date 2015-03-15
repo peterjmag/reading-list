@@ -1,25 +1,20 @@
 import React from 'react';
+import Reflux from 'reflux';
+import LinkStore from '../stores/LinkStore';
+import LinkActions from '../actions/LinkActions';
 import URLInput from './URLInput';
 
 export default React.createClass({
-    getInitialState: function () {
-        return {
-            items: []
-        };
-    },
+    mixins: [
+        Reflux.connect(LinkStore, 'list')
+    ],
     handleAdd: function (text) {
-        var items = this.state.items;
-        items.push({
-            id: Date.now(),
-            text: text
-        });
-
-        this.setState({ items: items });
+        LinkActions.addLink(text);
     },
     render: function () {
-        var items = this.state.items.map(function (item) {
+        var items = this.state.list.map(function (item) {
             return (
-                <li key={item.id}>{item.text}</li>
+                <li key={item.id}>{item.url}</li>
             );
         });
 
