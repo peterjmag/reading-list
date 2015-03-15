@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Peter Magenheimer",
@@ -15,6 +16,10 @@
     "react": "^0.13.0",
     "sass-loader": "^0.5.0",
     "style-loader": "^0.8.3",
-    "webpack": "^1.7.3"
+    "webpack": "^1.7.3",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "devDependencies": {
+    "react-hot-loader": "^1.2.3"
   }
 }
