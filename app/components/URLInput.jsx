@@ -1,4 +1,5 @@
 import React from 'react';
+import LinkActions from '../actions/LinkActions';
 
 export default React.createClass({
     getInitialState: function () {
@@ -11,7 +12,7 @@ export default React.createClass({
     },
     handleSubmit: function (e) {
         e.preventDefault();
-        this.props.handleAdd(this.state.text);
+        LinkActions.addLink(this.state.text);
 
         this.setState({ text: '' });
     },
