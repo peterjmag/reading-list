@@ -5,9 +5,6 @@ export default Reflux.createStore({
     listenables: [
         LinkActions
     ],
-    init: function () {
-        this.list = [];
-    },
     onAddLink: function (url) {
         this.updateList([{
             url: url,
