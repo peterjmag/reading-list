@@ -23,9 +23,6 @@ export default React.createClass({
         LinkActions.addLink(text);
         this.setState({ text: '' });
     },
-    isValidUri: function (e) {
-        return validUrl.isUri(this.state.text);
-    },
     render: function () {
         var text = this.state.text;
 
