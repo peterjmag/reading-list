@@ -1,14 +1,15 @@
 import React from 'react';
+import LinkedStateMixin from 'react/lib/LinkedStateMixin';
 import LinkActions from '../actions/LinkActions';
 
 export default React.createClass({
+    mixins: [
+        LinkedStateMixin
+    ],
     getInitialState: function () {
         return {
             text: ''
         };
-    },
-    onChange: function (e) {
-        this.setState({ text: e.target.value });
     },
     handleSubmit: function (e) {
         e.preventDefault();
@@ -22,9 +23,8 @@ export default React.createClass({
                 <input
                     className="url-input"
                     type="text"
-                    value={this.state.text}
-                    onChange={this.onChange}
-                    placeholder="Paste a link" />
+                    placeholder="Paste a link"
+                    valueLink={this.linkState('text')} />
                 <button>Post</button>
             </form>
         );
