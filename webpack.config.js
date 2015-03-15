@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'assets'),
         publicPath: '/assets/',
-        filename: 'bundle.js'       
+        filename: 'bundle.js'
     },
     module: {
         loaders: [
@@ -19,7 +19,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx'] 
+        extensions: ['', '.js', '.jsx']
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
