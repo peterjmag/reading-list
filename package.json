@@ -1,0 +1,20 @@
+{
+  "name": "reading-list",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Peter Magenheimer",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^4.7.12",
+    "babel-loader": "^4.1.0",
+    "css-loader": "^0.9.1",
+    "react": "^0.13.0",
+    "sass-loader": "^0.5.0",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.7.3"
+  }
+}
