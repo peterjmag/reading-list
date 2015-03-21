@@ -2,6 +2,14 @@ var express = require('express');
 var MetaInspector = require('node-metainspector');
 var app = express();
 
+// TODO: Improve CSP
+// http://enable-cors.org/server_expressjs.html
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 app.get('/api/v1/urlmeta/:url', function(req, res) {
     var client = new MetaInspector(req.params.url, {});
 
