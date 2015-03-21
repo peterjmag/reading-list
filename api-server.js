@@ -28,7 +28,7 @@ app.get('/api/v1/urlmeta/:url', function(req, res) {
     client.fetch();
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(3001, function () {
   var host = server.address().address;
   var port = server.address().port;
 
