@@ -1,6 +1,8 @@
 import Reflux from 'reflux';
-require('es6-promise').polyfill();
-require('isomorphic-fetch');
+import Promise from 'es6-promise';
+import 'isomorphic-fetch';
+
+Promise.polyfill();
 
 var LinkActions = Reflux.createActions({
     'addLink': { asyncResult: true }
