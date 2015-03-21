@@ -11,7 +11,7 @@ export default Reflux.createStore({
     onAddLinkCompleted: function (link, urlMeta) {
         // This seems to magically mutate the newly created link object in place.
         // No reassignment to this.list is necessary.
-        link.url = urlMeta.title;
+        link.title = urlMeta.title;
         this.updateList(this.list);
     },
     onAddLinkFailed: function (link) {
@@ -24,7 +24,8 @@ export default Reflux.createStore({
     getInitialState: function () {
         this.list = [{
             id: Date.now(),
-            url: 'http://google.com/test'
+            url: 'https://developer.github.com/guides/getting-started/',
+            title: 'Getting Started | GitHub API'
         }];
 
         return this.list;

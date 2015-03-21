@@ -8,8 +8,15 @@ export default React.createClass({
     ],
     render: function () {
         var items = this.state.list.map(function (item) {
+            var title = item.title ?
+                (<strong>{item.title}<br /></strong>) :
+                null;
+
             return (
-                <li key={item.id}>{item.url}</li>
+                <li key={item.id}>
+                    {title}
+                    {item.url}
+                </li>
             );
         });
 
