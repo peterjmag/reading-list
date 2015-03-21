@@ -14,7 +14,7 @@
     "babel-loader": "^4.1.0",
     "css-loader": "^0.9.1",
     "express": "^4.12.3",
-    "open-graph": "^0.1.5",
+    "node-metainspector": "^1.0.0",
     "react": "^0.13.0",
     "reflux": "^0.2.7",
     "request": "^2.53.0",

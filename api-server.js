@@ -1,16 +1,23 @@
 var express = require('express');
-var og = require('open-graph');
+var MetaInspector = require('node-metainspector');
 var app = express();
 
 app.get('/api/v1/urlmeta/:url', function(req, res) {
-    og(req.params.url, function (err, meta) {
-        if (err) {
-            res.json(err);
-            return;
-        }
+    var client = new MetaInspector(req.params.url, {});
 
-        res.json(meta)
+    client.on('fetch', function () {
+        res.json({
+            url: client.url,
+            title: client.title
+        });
     });
+
+    client.on('error', function (err) {
+        res.statusCode = 404;
+        res.json(err);
+    });
+
+    client.fetch();
 });
 
 var server = app.listen(3000, function () {
