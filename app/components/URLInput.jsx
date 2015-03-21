@@ -20,7 +20,10 @@ export default React.createClass({
             return;
         }
 
-        LinkActions.addLink(text);
+        LinkActions.addLink({
+            url: text,
+            id: Date.now()
+        });
         this.setState({ text: '' });
     },
     render: function () {
