@@ -40,6 +40,17 @@ app.post('/links/', function(req, res) {
     client.fetch();
 });
 
+app.get('/links/', function (req, res) {
+    db.find({}, function (err, links) {
+        if (err) {
+            res.statusCode = 404;
+            res.json(err);
+        };
+
+        res.json(links);
+    });
+});
+
 var server = app.listen(3001, function () {
   var host = server.address().address;
   var port = server.address().port;
