@@ -31,7 +31,7 @@ export default React.createClass({
 
         var style = {
             input: {
-                backgroundColor: text.length > 0 ? (validUrl.isUri(text) ? '#dff0d8' : '#f2dede') : null
+                backgroundColor: text.length > 0 ? (validUrl.isUri(text) ? '#ffffff' : '#f2dede') : null
             }
         };
 
