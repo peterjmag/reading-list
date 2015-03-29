@@ -1,6 +1,7 @@
 import React from 'react';
 import LinkedStateMixin from 'react/lib/LinkedStateMixin';
 import validUrl from 'valid-url';
+import URI from 'uri-js';
 import LinkActions from '../actions/LinkActions';
 
 export default React.createClass({
@@ -22,6 +23,7 @@ export default React.createClass({
 
         LinkActions.addLink({
             url: text,
+            host: URI.parse(text).host,
             id: Date.now()
         });
         this.setState({ text: '' });

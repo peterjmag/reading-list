@@ -17,7 +17,7 @@ export default React.createClass({
                 <div className="image-container" />
                 <div className="text-container">
                     <span className="link-title">{title}</span>
-                    <span className="link-url">{this.props.link.url}</span>
+                    <span className="link-host">{this.props.link.host}</span>
                 </div>
             </div>
         );

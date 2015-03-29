@@ -23,6 +23,7 @@
     "request": "^2.53.0",
     "sass-loader": "^1.0.0",
     "style-loader": "^0.9.0",
+    "uri-js": "^1.4.2",
     "valid-url": "^1.0.9",
     "webpack": "^1.7.3",
     "webpack-dev-server": "^1.7.0"

@@ -25,6 +25,7 @@ export default Reflux.createStore({
         this.list = [{
             id: Date.now(),
             url: 'https://developer.github.com/guides/getting-started/',
+            host: 'developer.github.com',
             title: 'Getting Started | GitHub API'
         }];
 
