@@ -27,6 +27,13 @@ body {
   width: 100%;
   font-size: 20px;
   padding: 10px;
+  border: 1px solid #E4E4E4;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+  &:focus {
+    outline: none;
+    border-color: #66AFE9;
+  }
 }
 
 .list-container {
