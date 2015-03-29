@@ -57,6 +57,10 @@ body {
   &:last-of-type {
     border-bottom-width: 0;
   }
+
+  &:hover {
+    background-color: #F7F7F4;
+  }
 }
 
 .list-row-pending {
