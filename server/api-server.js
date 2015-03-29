@@ -1,6 +1,9 @@
 var express = require('express');
 var MetaInspector = require('node-metainspector');
+var Datastore = require('nedb');
+
 var app = express();
+var db = new Datastore({ filename: 'links.db', autoload: true });
 
 // TODO: Improve CSP
 // http://enable-cors.org/server_expressjs.html
@@ -14,11 +17,16 @@ app.get('/api/v1/urlmeta/:url', function(req, res) {
     var client = new MetaInspector(req.params.url, {});
 
     client.on('fetch', function () {
-        res.json({
+        var linkData = {
+            id: Date.now(),
             url: client.url,
             title: client.title,
             host: client.host
-        });
+        };
+
+        db.insert(linkData, function (err, newDoc) {
+          res.json(newDoc);
+        })
     });
 
     client.on('error', function (err) {
