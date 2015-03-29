@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var MetaInspector = require('node-metainspector');
 var Datastore = require('nedb');
 
@@ -13,8 +14,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/api/v1/urlmeta/:url', function(req, res) {
-    var client = new MetaInspector(req.params.url, {});
+app.use(bodyParser.json());
+
+app.post('/links/', function(req, res) {
+    var client = new MetaInspector(req.body.url, {});
 
     client.on('fetch', function () {
         var linkData = {
