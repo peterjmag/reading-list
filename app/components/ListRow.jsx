@@ -6,8 +6,14 @@ export default React.createClass({
             this.props.link.title :
             '...';
 
+        var style = {
+            container: {
+                backgroundColor: this.props.link.title ? 'white' : '#CAFFF6'
+            }
+        };
+
         return (
-            <div className="list-row">
+            <div className="list-row" style={style.container}>
                 <div className="image-container" />
                 <div className="text-container">
                     <span className="link-title">{title}</span>

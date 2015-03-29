@@ -37,7 +37,6 @@ body {
 }
 
 .list-container {
-  background-color: white;
   margin-top: 20px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -50,6 +49,7 @@ body {
   min-height: 100px;
   padding: 10px;
   border-bottom: 1px solid #E4E4E4;
+  transition: 0.2s background-color;
 
   &:last-of-type {
     border-bottom-width: 0;
