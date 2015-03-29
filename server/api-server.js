@@ -16,7 +16,8 @@ app.get('/api/v1/urlmeta/:url', function(req, res) {
     client.on('fetch', function () {
         res.json({
             url: client.url,
-            title: client.title
+            title: client.title,
+            host: client.host
         });
     });
 
