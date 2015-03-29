@@ -49,6 +49,7 @@ body {
   min-height: 100px;
   color: inherit;
   text-decoration: none;
+  background-color: white;
   padding: 10px;
   border-bottom: 1px solid #E4E4E4;
   transition: 0.2s background-color;
@@ -56,6 +57,10 @@ body {
   &:last-of-type {
     border-bottom-width: 0;
   }
+}
+
+.list-row-pending {
+  background-color: #CAFFF6;
 }
 
 .text-container {

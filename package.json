@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-core": "^4.7.12",
     "babel-loader": "^4.1.0",
+    "classnames": "^1.2.0",
     "css-loader": "^0.9.1",
     "es6-promise": "^2.0.1",
     "express": "^4.12.3",

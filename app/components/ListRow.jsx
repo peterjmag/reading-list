@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 export default React.createClass({
     render: function () {
@@ -6,14 +7,13 @@ export default React.createClass({
             this.props.link.title :
             '...';
 
-        var style = {
-            container: {
-                backgroundColor: this.props.link.title ? 'white' : '#CAFFF6'
-            }
-        };
+        var classes = classNames({
+            'list-row': true,
+            'list-row-pending': !this.props.link.title
+        });
 
         return (
-            <a className="list-row" href={this.props.link.url} target="_blank" style={style.container}>
+            <a className={classes} href={this.props.link.url} target="_blank">
                 <div className="image-container" />
                 <div className="text-container">
                     <span className="link-title">{title}</span>
