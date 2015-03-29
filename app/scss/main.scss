@@ -44,11 +44,34 @@ body {
 }
 
 .list-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   min-height: 100px;
-  padding: 20px;
+  padding: 10px;
   border-bottom: 1px solid #E4E4E4;
 
   &:last-of-type {
     border-bottom-width: 0;
   }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  width: 80px;
+  height: 80px;
+  background-color: #DDD;
+  margin-right: 15px;
+}
+
+.link-title {
+  font-weight: bold;
+}
+
+.link-url {
+  color: #999;
 }
