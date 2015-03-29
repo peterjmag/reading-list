@@ -1,29 +1,25 @@
 import React from 'react';
 import Reflux from 'reflux';
 import LinkStore from '../stores/LinkStore';
+import ListRow from './ListRow';
 
 export default React.createClass({
     mixins: [
         Reflux.connect(LinkStore, 'list')
     ],
     render: function () {
-        var items = this.state.list.map(function (item) {
-            var title = item.title ?
-                (<strong>{item.title}<br /></strong>) :
-                null;
-
+        var items = this.state.list.map(function (link) {
             return (
-                <li key={item.id}>
-                    {title}
-                    {item.url}
-                </li>
+                <ListRow
+                    key={link.id}
+                    link={link} />
             );
         });
 
         return (
-            <ul>
+            <div className="list-container">
                 {items}
-            </ul>
+            </div>
         );
     }
 });
