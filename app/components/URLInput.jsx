@@ -40,10 +40,10 @@ export default React.createClass({
                 <input
                     className="url-input"
                     type="text"
-                    placeholder="Paste a link"
+                    placeholder="Paste a link and hit enter"
                     style={style.input}
                     valueLink={this.linkState('text')} />
-                <button>Post</button>
+                <button hidden={true}>Post</button>
             </form>
         );
     }
