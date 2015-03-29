@@ -13,13 +13,13 @@ export default React.createClass({
         };
 
         return (
-            <div className="list-row" style={style.container}>
+            <a className="list-row" href={this.props.link.url} target="_blank" style={style.container}>
                 <div className="image-container" />
                 <div className="text-container">
                     <span className="link-title">{title}</span>
                     <span className="link-host">{this.props.link.host}</span>
                 </div>
-            </div>
+            </a>
         );
     }
 });
