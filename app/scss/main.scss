@@ -7,23 +7,25 @@
 }
 
 body {
-  font-family: sans-serif;
-  background: rgb(245, 245, 235);
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+  background: #F5F5EB;
 }
 
 .reading-list-app {
   max-width: 600px;
-  margin: 60px auto;
+  margin: 80px auto;
 }
 
 .app-name {
+  font-weight: 200;
   text-align: center;
   margin-bottom: 40px;
 }
 
 .url-input {
   width: 100%;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
 }
 
