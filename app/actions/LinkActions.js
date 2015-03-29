@@ -5,6 +5,7 @@ import 'isomorphic-fetch';
 Promise.polyfill();
 
 var LinkActions = Reflux.createActions({
+    'load': {},
     'addLink': { asyncResult: true }
 });
 
