@@ -26,3 +26,20 @@ body {
   font-size: 24px;
   padding: 10px;
 }
+
+.list-container {
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-row {
+  min-height: 100px;
+  padding: 20px;
+  border-bottom: 1px solid #E4E4E4;
+
+  &:last-of-type {
+    border-bottom-width: 0;
+  }
+}
