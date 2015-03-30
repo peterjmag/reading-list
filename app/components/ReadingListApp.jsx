@@ -1,6 +1,6 @@
 import React from 'react';
 import URLInput from './URLInput';
-import RecommendedList from './RecommendedList';
+import ListContainer from './ListContainer';
 
 export default React.createClass({
     render: function () {
@@ -8,7 +8,7 @@ export default React.createClass({
             <div className="reading-list-app">
                 <h1 className="app-name">readinglist.co</h1>
                 <URLInput handleAdd={this.handleAdd} />
-                <RecommendedList />
+                <ListContainer />
             </div>
         );
     }
