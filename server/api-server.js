@@ -41,7 +41,8 @@ app.post('/links/', function(req, res) {
 });
 
 app.get('/links/', function (req, res) {
-    db.find({}, function (err, links) {
+    // TODO: Sort by created date instead of ID.
+    db.find({}).sort({ id: -1 }).exec(function (err, links) {
         if (err) {
             res.statusCode = 404;
             res.json(err);
