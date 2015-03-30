@@ -20,7 +20,7 @@
     "isomorphic-fetch": "^2.0.0",
     "nedb": "^1.1.1",
     "node-metainspector": "^1.0.0",
-    "node-sass": "^3.0.0-pre",
+    "node-sass": "^3.0.0-alpha.0",
     "react": "^0.13.0",
     "reflux": "^0.2.7",
     "request": "^2.53.0",
