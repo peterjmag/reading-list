@@ -24,7 +24,8 @@ app.post('/links/', function(req, res) {
             id: Date.now(),
             url: client.url,
             title: client.title,
-            host: client.host
+            host: client.host,
+            image: client.image
         };
 
         db.insert(linkData, function (err, newDoc) {

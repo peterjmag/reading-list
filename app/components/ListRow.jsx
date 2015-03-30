@@ -14,7 +14,9 @@ export default React.createClass({
 
         return (
             <a className={classes} href={this.props.link.url} target="_blank">
-                <div className="image-container" />
+                <div className="image-container">
+                    <img className="link-image" src={this.props.link.image} />
+                </div>
                 <div className="text-container">
                     <span className="link-title">{title}</span>
                     <span className="link-host">{this.props.link.host}</span>
