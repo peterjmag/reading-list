@@ -7,6 +7,10 @@ export default React.createClass({
             this.props.link.title :
             '...';
 
+        var imageSrc = this.props.link.image ?
+            this.props.link.image :
+            '/assets/kitten.jpg';
+
         var classes = classNames({
             'list-row': true,
             'list-row-pending': !this.props.link.title
@@ -15,7 +19,7 @@ export default React.createClass({
         return (
             <a className={classes} href={this.props.link.url} target="_blank">
                 <div className="image-container">
-                    <img className="link-image" src={this.props.link.image} />
+                    <img className="link-image" src={imageSrc} />
                 </div>
                 <div className="text-container">
                     <span className="link-title">{title}</span>
