@@ -23,7 +23,7 @@ app.post('/links/', function(req, res) {
         var linkData = {
             id: Date.now(),
             url: client.url,
-            title: client.title,
+            title: client.title.replace(/\n/g, ' ').trim(),
             host: client.host,
             image: client.image
         };
