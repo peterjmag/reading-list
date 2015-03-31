@@ -27,8 +27,8 @@ LinkActions.addLink.listen(function (link) {
         }
 
         return response.json();
-    }).then(function (urlMeta) {
-        LinkActions.addLink.completed(link, urlMeta);
+    }).then(function (newLinkData) {
+        LinkActions.addLink.completed(link, newLinkData);
     });
 });
 

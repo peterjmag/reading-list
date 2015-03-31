@@ -11,10 +11,12 @@ export default Reflux.createStore({
     onAddLink: function (link) {
         this.updateList([link].concat(this.list));
     },
-    onAddLinkCompleted: function (link, urlMeta) {
+    onAddLinkCompleted: function (link, newLinkData) {
         // This seems to magically mutate the newly created link object in place.
         // No reassignment to this.list is necessary.
-        link.title = urlMeta.title;
+        link.title = newLinkData.title;
+        link.image = newLinkData.image;
+        link.host = newLinkData.host;
         this.updateList(this.list);
     },
     onAddLinkFailed: function (link) {
