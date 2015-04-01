@@ -24,6 +24,7 @@ export default React.createClass({
         LinkActions.addLink({
             url: text,
             host: URI.parse(text).host,
+            pending: true,
             id: Date.now()
         });
         this.setState({ text: '' });

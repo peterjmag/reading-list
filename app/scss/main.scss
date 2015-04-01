@@ -76,8 +76,13 @@ body {
   width: 80px;
   min-width: 80px;
   height: 80px;
-  background-color: #DDD;
   margin-right: 15px;
+}
+
+.list-row-pending {
+  .image-container {
+    background-color: #DDD;
+  }
 }
 
 .link-title {

@@ -17,6 +17,7 @@ export default Reflux.createStore({
         link.title = newLinkData.title;
         link.image = newLinkData.image;
         link.host = newLinkData.host;
+        link.pending = false;
         this.updateList(this.list);
     },
     onAddLinkFailed: function (link) {

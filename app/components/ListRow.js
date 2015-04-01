@@ -3,17 +3,20 @@ import classNames from 'classnames';
 
 export default React.createClass({
     render: function () {
-        var title = this.props.link.title ?
-            this.props.link.title :
-            '...';
+        var title = this.props.link.pending ?
+            '...' :
+            this.props.link.title;
 
-        var imageSrc = this.props.link.image ?
-            this.props.link.image :
-            '/assets/kitten.jpg';
+        var imageSrc;
+        if (!this.props.link.pending) {
+            imageSrc = this.props.link.image ?
+                this.props.link.image :
+                '/assets/kitten.jpg';
+        };
 
         var classes = classNames({
             'list-row': true,
-            'list-row-pending': !this.props.link.title
+            'list-row-pending': this.props.link.pending
         });
 
         return (
