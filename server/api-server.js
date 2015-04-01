@@ -7,16 +7,16 @@ var app = express();
 var db = new Datastore({ filename: 'links.db', autoload: true });
 
 var sanitizeTitle = function (title) {
-  // http://stackoverflow.com/a/7764370/349353
-  return title.replace(/\n/g, ' ').replace(/\s+/g,' ').trim();
+// http://stackoverflow.com/a/7764370/349353
+    return title.replace(/\n/g, ' ').replace(/\s+/g,' ').trim();
 };
 
 // TODO: Improve CSP
 // http://enable-cors.org/server_expressjs.html
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
 });
 
 app.use(bodyParser.json());
@@ -59,8 +59,8 @@ app.get('/links/', function (req, res) {
 });
 
 var server = app.listen(3001, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+    var host = server.address().address;
+    var port = server.address().port;
 
-  console.log('API server listening at http://%s:%s', host, port);
+    console.log('API server listening at http://%s:%s', host, port);
 });
