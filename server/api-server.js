@@ -6,6 +6,11 @@ var Datastore = require('nedb');
 var app = express();
 var db = new Datastore({ filename: 'links.db', autoload: true });
 
+var sanitizeTitle = function (title) {
+  // http://stackoverflow.com/a/7764370/349353
+  return title.replace(/\n/g, ' ').replace(/\s+/g,' ').trim();
+};
+
 // TODO: Improve CSP
 // http://enable-cors.org/server_expressjs.html
 app.use(function(req, res, next) {
@@ -23,7 +28,7 @@ app.post('/links/', function(req, res) {
         var linkData = {
             id: Date.now(),
             url: client.url,
-            title: client.title.replace(/\n/g, ' ').trim(),
+            title: sanitizeTitle(client.title),
             host: client.host,
             image: client.image
         };
